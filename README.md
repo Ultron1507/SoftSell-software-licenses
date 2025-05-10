@@ -39,7 +39,7 @@ Build and deploy a visually appealing, fully responsive one-page React app that 
 
 ---
 
-##  Bonus Features
+##  Features
 
 -  **Dark/Light Mode Toggle**
 -  **Framer Motion Animations** (hero section, cards, scroll indicator)
