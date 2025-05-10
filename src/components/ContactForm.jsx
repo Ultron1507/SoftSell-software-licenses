@@ -39,12 +39,22 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-16 px-6 bg-gray-100 text-gray-900">
+    <section
+      className="py-16 px-6"
+      style={{ backgroundColor: "var(--bg-color)", color: "var(--text-color)" }}
+    >
       <div className="max-w-3xl mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-center">Contact Us</h2>
         <form
           onSubmit={handleSubmit}
-          className="grid grid-cols-1 gap-6 bg-white p-8 rounded-lg shadow"
+          className="grid grid-cols-1 gap-6 p-8 rounded-lg shadow"
+          style={{
+            backgroundColor: "var(--card-bg)",
+            color: "var(--text-color)",
+            borderColor: "var(--card-border)",
+            borderWidth: "1px",
+            borderStyle: "solid",
+          }}
         >
           <div>
             <label className="block mb-1 font-medium">Name</label>
@@ -52,40 +62,67 @@ const ContactForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full border px-4 py-2 rounded"
+              className="w-full px-4 py-2 rounded"
+              style={{
+                backgroundColor: "var(--bg-color)",
+                color: "var(--text-color)",
+                borderColor: "var(--card-border)",
+                borderWidth: "1px",
+              }}
               type="text"
             />
             {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
           </div>
+
           <div>
             <label className="block mb-1 font-medium">Email</label>
             <input
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full border px-4 py-2 rounded"
+              className="w-full px-4 py-2 rounded"
+              style={{
+                backgroundColor: "var(--bg-color)",
+                color: "var(--text-color)",
+                borderColor: "var(--card-border)",
+                borderWidth: "1px",
+              }}
               type="email"
             />
             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
           </div>
+
           <div>
             <label className="block mb-1 font-medium">Company</label>
             <input
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full border px-4 py-2 rounded"
+              className="w-full px-4 py-2 rounded"
+              style={{
+                backgroundColor: "var(--bg-color)",
+                color: "var(--text-color)",
+                borderColor: "var(--card-border)",
+                borderWidth: "1px",
+              }}
               type="text"
             />
             {errors.company && <p className="text-red-500 text-sm">{errors.company}</p>}
           </div>
+
           <div>
             <label className="block mb-1 font-medium">License Type</label>
             <select
               name="licenseType"
               value={formData.licenseType}
               onChange={handleChange}
-              className="w-full border px-4 py-2 rounded"
+              className="w-full px-4 py-2 rounded"
+              style={{
+                backgroundColor: "var(--bg-color)",
+                color: "var(--text-color)",
+                borderColor: "var(--card-border)",
+                borderWidth: "1px",
+              }}
             >
               <option value="">Select a type</option>
               <option value="Office Suite">Office Suite</option>
@@ -97,22 +134,31 @@ const ContactForm = () => {
               <p className="text-red-500 text-sm">{errors.licenseType}</p>
             )}
           </div>
+
           <div>
             <label className="block mb-1 font-medium">Message</label>
             <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full border px-4 py-2 rounded"
+              className="w-full px-4 py-2 rounded"
               rows="4"
+              style={{
+                backgroundColor: "var(--bg-color)",
+                color: "var(--text-color)",
+                borderColor: "var(--card-border)",
+                borderWidth: "1px",
+              }}
             />
             {errors.message && (
               <p className="text-red-500 text-sm">{errors.message}</p>
             )}
           </div>
+
           <button
             type="submit"
-            className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+            className="py-2 rounded hover:opacity-90 transition"
+            style={{ backgroundColor: "#2563eb", color: "#fff" }}
           >
             Submit
           </button>

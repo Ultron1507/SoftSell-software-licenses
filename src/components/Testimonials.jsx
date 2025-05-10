@@ -19,7 +19,10 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-16 px-6 bg-white text-gray-900">
+    <section
+      className="py-16 px-6"
+      style={{ backgroundColor: "var(--bg-color)", color: "var(--text-color)" }}
+    >
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-12">What Our Customers Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -27,11 +30,17 @@ const Testimonials = () => {
             <div
               key={idx}
               className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+              style={{
+                backgroundColor: "var(--card-bg)",
+                borderColor: "var(--card-border)",
+              }}
             >
-              <p className="italic text-gray-700 mb-4">“{t.quote}”</p>
+              <p className="italic mb-4" style={{ color: "var(--text-color)" }}>
+                “{t.quote}”
+              </p>
               <div className="text-left">
                 <h4 className="font-semibold text-lg">{t.name}</h4>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm" style={{ color: "var(--text-color)" }}>
                   {t.role}, {t.company}
                 </p>
               </div>

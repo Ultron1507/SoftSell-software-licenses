@@ -1,2 +1,41 @@
 @import "tailwindcss";
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f9f9f9;
+  --card-border: #ccc;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --card-bg: #1e1e1e;
+  --card-border: #333;
+}
+
+
+/* Button styling */
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px; /* Move button to the top */
+  right: 20px; /* Keep the button on the right side */
+  background-color: #1f2937;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 9999;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
