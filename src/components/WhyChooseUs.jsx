@@ -25,20 +25,32 @@ const features = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-16 px-6 text-gray-900" style={{ backgroundColor: "var(--card-bg)" }}>
+    <section
+      className="py-16 px-6"
+      style={{
+        backgroundColor: "var(--bg-color)",
+        color: "var(--text-color)",
+      }}
+    >
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-10">Why Choose Us</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {features.map((item, idx) => (
             <div
               key={idx}
-              className="p-6 border rounded-lg shadow hover:shadow-lg transition bg-white dark:bg-[#1e1e1e]"
+              className="p-6 border rounded-lg shadow hover:shadow-lg transition"
+              style={{
+                backgroundColor: "var(--card-bg)",
+                borderColor: "var(--card-border)",
+              }}
             >
               <div className="text-blue-600 text-4xl mb-4">
                 <i className={item.icon}></i>
               </div>
               <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">{item.desc}</p>
+              <p className="text-sm" style={{ color: "var(--text-color)" }}>
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
