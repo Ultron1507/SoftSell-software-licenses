@@ -1,50 +1,44 @@
 import React from "react";
 
-const steps = [
+const features = [
   {
-    icon: "ri-upload-cloud-2-line",
-    title: "Upload License",
-    desc: "Easily upload your unused software license in a few clicks.",
+    icon: "ri-shield-check-line",
+    title: "Secure Transactions",
+    desc: "Your data and licenses are handled with top-level security.",
   },
   {
-    icon: "ri-search-eye-line",
-    title: "Get Valuation",
-    desc: "We evaluate your license and provide a fair market quote.",
+    icon: "ri-speed-up-line",
+    title: "Fast Payouts",
+    desc: "Get paid quickly after we verify your license.",
   },
   {
-    icon: "ri-money-dollar-circle-line",
-    title: "Get Paid",
-    desc: "Accept the offer and receive payment quickly and securely.",
+    icon: "ri-customer-service-2-line",
+    title: "Expert Support",
+    desc: "Our support team is ready to assist you anytime.",
+  },
+  {
+    icon: "ri-global-line",
+    title: "Global Marketplace",
+    desc: "Reach verified buyers from around the world.",
   },
 ];
 
-const HowItWorks = () => {
+const WhyChooseUs = () => {
   return (
-    <section
-      className="py-16 px-6 text-gray-800"
-      style={{
-        backgroundColor: "var(--bg-color)", // Apply section background color
-        color: "var(--text-color)", // Text color for section
-      }}
-    >
+    <section className="py-16 px-6 text-gray-900" style={{ backgroundColor: "var(--card-bg)" }}>
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-10">How It Works</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {steps.map((step, index) => (
+        <h2 className="text-4xl font-bold mb-10">Why Choose Us</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {features.map((item, idx) => (
             <div
-              key={index}
-              className="p-6 shadow-md rounded-lg"
-              style={{
-                backgroundColor: "var(--card-bg)", 
-                borderColor: "var(--card-border)", 
-                border: "1px solid", 
-              }}
+              key={idx}
+              className="p-6 border rounded-lg shadow hover:shadow-lg transition bg-white dark:bg-[#1e1e1e]"
             >
-              <div className="text-blue-600 text-5xl mb-4">
-                <i className={step.icon}></i>
+              <div className="text-blue-600 text-4xl mb-4">
+                <i className={item.icon}></i>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-              <p className="text-gray-600">{step.desc}</p>
+              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -53,4 +47,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default WhyChooseUs;
